@@ -12,4 +12,12 @@ If you're like me, the jetson can be ssh'd by the Mac but not the vm on the mac.
 
 Now, we can feasibly transfer the package by running the jetpack installer but not flashing or installing partitions and etc. as these were successful. But, supposedly we need to do this while in force recovery mode, and placing the device like so causes the device to no longer be pingable from the vm. Well, I simply tried to transfer the package (not the flash and partitioning) without being in force recovery mode and found it worked. 
 
-Afterwards, I use Mac os to ssh through the ethernet connection
+Afterwards, I use Mac os to ssh through the ethernet connection.
+
+Python and tensorflow can be setup  here:
+
+But anaconda can't run on the aarm64 so packages must be installed oneself. 
+
+Pytorch can be installed here:
+
+I had a problem though as Cmake wasn't installed, so check version and/or install: sudo apt-get --assume-yes install cmake
