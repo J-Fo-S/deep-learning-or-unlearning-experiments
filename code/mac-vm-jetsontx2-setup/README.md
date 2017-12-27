@@ -21,3 +21,9 @@ But anaconda can't run on the aarm64 so packages must be installed oneself.
 Pytorch for gpu-accelerated tensors can be installed here: https://github.com/dusty-nv/jetson-scripts/blob/master/pytorch_jetson_install.sh
 
 I had a problem though as Cmake wasn't installed, so check version and/or install: sudo apt-get --assume-yes install cmake
+
+This got through to the "sudo python3 setup.py develop" command which failed. Since pytorch recommends installation with anaconda (not possible with TX2) I figured I should set up dependencies first to see if this would help it through
+
+I installed OpenCV 3 here: https://github.com/Naurislv/NVidia-Jetson-TX2-Install-Guide-Lines and here: https://github.com/Naurislv/NVidia-Jetson-TX2-Install-Guide-Lines
+
+
