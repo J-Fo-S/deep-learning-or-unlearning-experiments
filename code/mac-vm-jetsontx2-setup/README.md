@@ -28,7 +28,9 @@ I installed standard and dev python packages + OpenCV 3 here: https://github.com
 
 For choosing performance modes: http://www.jetsonhacks.com/2017/03/25/nvpmodel-nvidia-jetson-tx2-development-kit/
 
-install tensorflow here: https://github.com/jetsonhacks/installTensorFlowTX2
+install/build tensorflow here: https://github.com/jetsonhacks/installTensorFlowTX2
+
+if you have a jetson package later than 3.1, you will have Cuda 9.0, and the above tensorflow install is for 8.0. You can either install 8.0 or gedit the sh files in the tensorflow build to be for Cuda version 9.0 and Cudnn version 7.0.5. Also, be sure to change the file directory from cuda to cuda-9.0  
 
 
 
