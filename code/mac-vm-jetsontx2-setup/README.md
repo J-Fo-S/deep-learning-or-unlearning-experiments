@@ -45,5 +45,7 @@ had trouble with bazel build errors similar to the described here: https://githu
 
 ran "bazel clean" which made it through the installation, but am now finding strange results with NUMA support issues: https://devtalk.nvidia.com/default/topic/1028087/jetson-tx2/odd-behavior-with-jetpack-3-2-and-tensorflow/
 
+system process should be train on cloud/computer and inference on tx2
+
 
 
