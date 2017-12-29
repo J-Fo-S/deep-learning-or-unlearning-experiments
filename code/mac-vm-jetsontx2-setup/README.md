@@ -24,7 +24,12 @@ I had a problem though as Cmake wasn't installed, so check version and/or instal
 
 This got through to the "sudo python3 setup.py develop" command which failed. Since pytorch recommends installation with anaconda (not possible with TX2) I figured I should set up dependencies first to see if this would help it through.. and it did.
 
-I installed standard and dev python packages + OpenCV 3 here: https://github.com/Naurislv/NVidia-Jetson-TX2-Install-Guide-Lines and here: https://github.com/Naurislv/NVidia-Jetson-TX2-Install-Guide-Lines
+Strangely, the opencv 3.3.1 that came with jetpack 3.2 did not include cv2.so module, which means it can't be run from python
+I installed standard and dev python packages + OpenCV 3 here: https://github.com/Naurislv/NVidia-Jetson-TX2-Install-Guide-Lines and here: https://github.com/Naurislv/NVidia-Jetson-TX2-Install-Guide-Lines MAYBE NOT BEST IDEA
+try here and here instead: https://www.learnopencv.com/install-opencv3-on-ubuntu/
+https://www.pyimagesearch.com/2016/10/24/ubuntu-16-04-how-to-install-opencv/
+
+Check CUDA version as described here: https://devtalk.nvidia.com/default/topic/1027653/jetson-tx2/how-do-i-check-if-i-install-cuda-and-cudnn-successfully-/
 
 For choosing performance modes: http://www.jetsonhacks.com/2017/03/25/nvpmodel-nvidia-jetson-tx2-development-kit/
 
