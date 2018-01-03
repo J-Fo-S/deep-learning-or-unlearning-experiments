@@ -30,10 +30,8 @@ I had a problem though as Cmake wasn't installed, so check version and/or instal
 
 This got through to the "sudo python3 setup.py develop" command which failed. Since pytorch recommends installation with anaconda (not possible with TX2) I figured I should set up dependencies first to see if this would help it through.. and it did.
 
-Strangely, the opencv 3.3.1 that came with jetpack 3.2 did not include cv2.so module, which means it can't be run from python
-I installed standard and dev python packages + OpenCV 3 here: https://github.com/Naurislv/NVidia-Jetson-TX2-Install-Guide-Lines and here: https://github.com/Naurislv/NVidia-Jetson-TX2-Install-Guide-Lines MAYBE NOT BEST IDEA
-try here and here instead: https://www.learnopencv.com/install-opencv3-on-ubuntu/
-https://www.pyimagesearch.com/2016/10/24/ubuntu-16-04-how-to-install-opencv/
+Strangely, the opencv 3.3.1 that "came" with jetpack 3.2 did not include cv2.so module, which means it can't be run from python
+I installed standard and dev python packages + OpenCV 3 here: http://dev.t7.ai/jetson/opencv/ . 
 
 Check CUDA version as described here: https://devtalk.nvidia.com/default/topic/1027653/jetson-tx2/how-do-i-check-if-i-install-cuda-and-cudnn-successfully-/
 
@@ -41,17 +39,11 @@ For choosing performance modes: http://www.jetsonhacks.com/2017/03/25/nvpmodel-n
 
 (install/build tensorflow here: https://github.com/jetsonhacks/installTensorFlowTX2
 
-if you have a jetson package later than 3.1, you will have Cuda 9.0, and the above tensorflow install is for 8.0. You can either install 8.0 or gedit the sh files in the tensorflow build to be for Cuda version 9.0 and Cudnn version 7.0.5. Also, be sure to change the file directory from cuda to cuda-9.0. Also, in the cloneTensorFlow.sh file change tensorflow to 1.4, as there are missing dependencies for cuda 9.0 in earlier versions that cause fatal errors in compiling. Then, change bazel from 5.2 to 5.4 in the installPreRequisites.sh file.  ) DIDN'T WORK
+~~if you have a jetson package later than 3.1, you will have Cuda 9.0, and the above tensorflow install is for 8.0. You can either install 8.0 or gedit the sh files in the tensorflow build to be for Cuda version 9.0 and Cudnn version 7.0.5. Also, be sure to change the file directory from cuda to cuda-9.0. Also, in the cloneTensorFlow.sh file change tensorflow to 1.4, as there are missing dependencies for cuda 9.0 in earlier versions that cause fatal errors in compiling. Then, change bazel from 5.2 to 5.4 in the installPreRequisites.sh file.~~ DIDN'T WORK
 
-I tried here instead: http://blog.csdn.net/weixin_35654926/article/details/78635859
+I tried here instead: http://blog.csdn.net/weixin_35654926/article/details/78635859. Need to change commands to match one's version of python, cuda, cudnn and so on. Had trouble with bazel build errors similar to the described here: https://github.com/tensorflow/tensorflow/issues/11843. Ran "bazel clean" which made it through the installation. Tensorflow complains about NUMA support issues, but the folks at Nvidia say this warning can be ignored: https://devtalk.nvidia.com/default/topic/1028087/jetson-tx2/odd-behavior-with-jetpack-3-2-and-tensorflow/. 
 
-Need to change commands to match one's version of python, cuda, cudnn and so on.
 
-had trouble with bazel build errors similar to the described here: https://github.com/tensorflow/tensorflow/issues/11843
-
-ran "bazel clean" which made it through the installation, but am now finding strange results with NUMA support issues: https://devtalk.nvidia.com/default/topic/1028087/jetson-tx2/odd-behavior-with-jetpack-3-2-and-tensorflow/
-
-system process should be train on cloud/computer and inference on tx2
 
 
 
