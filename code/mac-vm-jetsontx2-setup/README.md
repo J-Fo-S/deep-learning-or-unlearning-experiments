@@ -20,9 +20,7 @@ Now, we can feasibly transfer the package by running the jetpack installer but n
 
 Afterwards, I use Mac os to ssh through the ethernet connection.
 
-Python and tensorflow can be setup here: http://www.jetsonhacks.com/2017/09/22/install-tensorflow-python-nvidia-jetson-tx-dev-kits/
-
-But anaconda can't run on the aarm64 so packages must be installed oneself. 
+For Python, anaconda can't run on the aarm64 so packages must be installed oneself. 
 
 Pytorch for gpu-accelerated tensors can be installed here: https://github.com/dusty-nv/jetson-scripts/blob/master/pytorch_jetson_install.sh. Useful issues and links can be found in comments below. 
 
