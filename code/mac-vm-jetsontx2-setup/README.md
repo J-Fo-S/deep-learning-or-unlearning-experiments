@@ -37,11 +37,11 @@ For choosing performance modes: http://www.jetsonhacks.com/2017/03/25/nvpmodel-n
 
 (install/build tensorflow here: https://github.com/jetsonhacks/installTensorFlowTX2
 
-~~if you have a jetson package later than 3.1, you will have Cuda 9.0, and the above tensorflow install is for 8.0. You can either install 8.0 or gedit the sh files in the tensorflow build to be for Cuda version 9.0 and Cudnn version 7.0.5. Also, be sure to change the file directory from cuda to cuda-9.0. Also, in the cloneTensorFlow.sh file change tensorflow to 1.4, as there are missing dependencies for cuda 9.0 in earlier versions that cause fatal errors in compiling. Then, change bazel from 5.2 to 5.4 in the installPreRequisites.sh file.~~ DIDN'T WORK
+~~if you have a jetson package later than 3.1, you will have Cuda 9.0, and the above tensorflow install is for 8.0. You can either install 8.0 or gedit the sh files in the tensorflow build to be for Cuda version 9.0 and Cudnn version 7.0.5. Also, be sure to change the file directory from cuda to cuda-9.0. Also, in the cloneTensorFlow.sh file change tensorflow to 1.4, as there are missing dependencies for cuda 9.0 in earlier versions that cause fatal errors in compiling. Then, change bazel from 5.2 to 5.4 in the installPreRequisites.sh file.~~ DIDN'T WORK (but could be because of Bazel issues described below)
 
 I tried here instead: http://blog.csdn.net/weixin_35654926/article/details/78635859. Need to change commands to match one's version of python, cuda, cudnn and so on. Had trouble with bazel build errors similar to the described here: https://github.com/tensorflow/tensorflow/issues/11843. Ran "bazel clean" which made it through the installation. Tensorflow complains about NUMA support issues, but the folks at Nvidia say this warning can be ignored: https://devtalk.nvidia.com/default/topic/1028087/jetson-tx2/odd-behavior-with-jetpack-3-2-and-tensorflow/. 
 
-
+NVidia's own (https://www.youtube.com/watch?v=gvmP0WRVUxI&t=6s)[opencv tutorials] for the jetson are already dated and will fail to build. Follow these two posts to make the builds succeed.
 
 
 
