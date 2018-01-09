@@ -41,7 +41,11 @@ For choosing performance modes: http://www.jetsonhacks.com/2017/03/25/nvpmodel-n
 
 I tried here instead: http://blog.csdn.net/weixin_35654926/article/details/78635859. Need to change commands to match one's version of python, cuda, cudnn and so on. Had trouble with bazel build errors similar to the described here: https://github.com/tensorflow/tensorflow/issues/11843. Ran "bazel clean" which made it through the installation. Tensorflow complains about NUMA support issues, but the folks at Nvidia say this warning can be ignored: https://devtalk.nvidia.com/default/topic/1028087/jetson-tx2/odd-behavior-with-jetpack-3-2-and-tensorflow/. 
 
-NVidia's own (https://www.youtube.com/watch?v=gvmP0WRVUxI&t=6s)[opencv tutorials] for the jetson are already dated and will fail to build. Follow these two posts to make the builds succeed.
+NVidia's own [https://www.youtube.com/watch?v=gvmP0WRVUxI&t=6s](opencv tutorials) for the jetson are already dated and will fail to build. Follow these two posts to make the builds succeed.
+
+https://github.com/patrikhuber/eos/issues/28
+https://stackoverflow.com/questions/36989044/error-puttext-is-not-a-member-of-cv
+
 
 
 
