@@ -1,4 +1,6 @@
-This is an awkward setup. With the Virtualbox required for running the jetpack install manager (flash and package transfer), a lot of hangups with connecting the host vm, host and jetson. Several different stories of success are out there, but my experience had even more problems, so try those first and then mine if problems persist
+This is an awkward setup. With the Virtualbox required for running the jetpack install manager (flash and package transfer), a lot of hangups with connecting the host vm, host and jetson. Several different stories of success are out there, but my experience had even more problems, so try those first and then mine if problems persist.
+
+to ssh into host from vm, just ```sudo apt-get openssh-server``` and note the address on the ```ifconfig``` command. Should work just like that. To ssh from vm to host, go to the share folder of OSX and allow remote login. Then set up a 2nd adapter network in the VM with NAT. ```arp -an``` should show a local address like 10.0.3.2 or something similar, which should be ssh-able.
 
 Start here: https://github.com/KleinYuan/tx2-flash
 
